@@ -1,3 +1,18 @@
+// Header
+const button = document.getElementById("setting-button");
+button.addEventListener("click", () => {
+    const value = button.innerText;
+
+    if (value === "settings") {
+        button.innerText = "close"
+    }
+    else {
+        button.innerText = "settings"
+    }
+
+})
+// timeline
+
 //Define start & end date
 let start = new Date("Sep 12, 2022").getTime();
 let end = new Date("Feb 10, 2023").getTime();
@@ -17,15 +32,3 @@ let progressBar = document.querySelector('.progress');
 daysDone < totalDays ? progressBar.style.height = `${parseInt(pourcentage)}%` : progressBar.style.height = "100%";
 
 
-const button = document.getElementById("setting-button");
-button.addEventListener("click", () => {
-    const value = button.innerText;
-
-    if (value === "settings") {
-        button.innerText = "close"
-    }
-    else {
-        button.innerText = "settings"
-    }
-
-})
