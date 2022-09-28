@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  height: 50px;
+}
+
+main {
+  background-color: grey;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.description h1 {
+  width: 90%;
+  padding-bottom: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+.description > p {
+  width: 80%;
+  font-size: 1.2rem;
+}
