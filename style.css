@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+header {
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0px 5px 5px gray;
+    background-color: #f76c6c;
+}
+
+.logo {
+    margin-top: .4rem;
+    display: flex;
+    height: 2.5rem;
+}
+
+header h1 {
+    display: flex;
+    font-size: 1.1rem;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.material-symbols-outlined {
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 300,
+        'GRAD' 0,
+        'opsz' 48,
+}
