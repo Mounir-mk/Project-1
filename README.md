@@ -6,3 +6,4 @@ Collaborators:
 Mounir Mekoui
 Romain Bronquard
 Valentin Marlois
+Jessy Hazart
