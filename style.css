@@ -1,0 +1,41 @@
+/*---- section formulaire ----*/
+
+.formulaire {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-sizing: border-box;
+}
+.formulaire label {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    display: block;
+}
+.formulaire input {
+    padding: 0;
+    width: 100%;
+}
+
+#firstname {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+#lastname {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+#email {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+}
+#message {
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
+}
+.formulaire form button {
+    grid-column: 1 / 3;
+    grid-row: 5 / 6;
+}
+.wrapper > div {
+    flex: 1 1 150px;
+  }
+/*---- fin de section de formulaire ----*/
