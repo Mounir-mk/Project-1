@@ -3,13 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 header {
   height: 50px;
 }
 
-main {
-  background-color: grey;
-}
+main {}
 
 .description {
   display: flex;
@@ -24,7 +23,41 @@ main {
   font-size: 2rem;
   text-align: center;
 }
-.description > p {
+
+.description>p {
   width: 80%;
   font-size: 1.2rem;
+}
+
+/*----Timeline CSS-----*/
+.timeline {
+  height: 100vh;
+  padding: 1rem;
+  display: flex;
+}
+
+.progress-bar {
+  width: 1rem;
+  background-color: whitesmoke;
+  border-radius: 1rem;
+}
+
+.progress {
+  width: 1rem;
+  background-color: #f76c6c;
+  border-radius: 1rem;
+}
+
+.infos {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.infos details {
+  padding: 1rem;
+}
+
+.hardskill ul {
+  list-style-type: none;
 }
