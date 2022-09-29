@@ -7,6 +7,28 @@
   padding: 0;
   box-sizing: border-box;
 }
+/*----- TEST SCROLL SNAP -------*/
+#header{
+  position: sticky;
+}
+
+main{
+  max-height: calc(100vh - 50px);
+  display: flex;
+  overflow: auto;
+  flex-flow: column nowrap;
+  scroll-snap-type: y mandatory;
+}
+
+#description , #timeline , #formulaire , #iframe{
+  width: 100%;
+  height: calc(100vh - 50px);
+  scroll-snap-align: center;
+  flex: none;
+}
+
+
+/*----- FIN TEST SCROLL SNAP -------*/
 
 /*----HEADER-CSS---*/
 header {
@@ -79,7 +101,7 @@ header h1 {
   padding-bottom: 2.5rem;
 }
 
-div img {
+#image-arrow {
   height: 70px;
   width: 70px;
   animation: bounce2 2s ease infinite;
@@ -104,7 +126,7 @@ div img {
 
 /*----Timeline CSS-----*/
 .timeline {
-  height: 100vh;
+  height: calc(100vh - 50px);
   padding: 1rem;
   display: flex;
 }
@@ -218,3 +240,6 @@ iframe {
 }
 
 /*---- fin de section de formulaire ----*/
+
+/*-------------FOOTER ------------- */
+

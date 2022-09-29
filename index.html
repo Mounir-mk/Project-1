@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,106 +14,117 @@
 <body>
 
   <script src="script.js"></script>
-
-  <header>
-    <img class="logo" src="./assets/WCS_logo.png" alt="Logo Wild code school">
-    <h1>The program for the season</h1>
-    <button class="material-symbols-outlined" id="setting-button">
-      settings
-    </button>
-  </header>
+  <div id="header">
+    <header>
+      <img class="logo" src="./assets/WCS_logo.png" alt="Logo Wild code school">
+      <h1>The program for the season</h1>
+      <button class="material-symbols-outlined" id="setting-button">
+        settings
+      </button>
+    </header>
+  </div>
   <main>
-    <section class="description">
-      <h1>Apprenez un métier tech, changez de carrière</h1>
-      <p>
-        Tout comme nous, rejoignez l’aventure pour devenir développeur web et
-        mobile. Apprenez à coder avec les technologies les plus recherchées
-        sur le marché : HTML, CSS, JavaScript, React, Node.js, Express.js.
-        <br>
-        Tout cela au campus de la Wild Code School de Reims, swippez vers le
-        bas pour voir la timeline du programme que nous suivons et où nous en
-        sommes.
-      </p>
-      <div>
-        <img src="assets/upward_circle_arrow.png" alt="image settings" draggable="false">
-      </div>
-    </section>
-    <section class="timeline">
-      <div class="progress-bar">
-        <div class="progress"></div>
-      </div>
-      <div class="timeline-spots">
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-      </div>
-      <div class="infos">
-        <details>
-          <summary>Les basiques du web</summary>
-          <p>Découvrez comment sont construites les pages web sur lesquelles vous surfez tous les jours et créez votre
-            première application statique.</p>
-          <div class="hardskill">
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>Javascript</li>
-            </ul>
-          </div>
-        </details>
-        <details>
-          <summary>Algorithmie et fondamentaux de la programmation</summary>
-          <p>Comprendre comment résoudre des problèmes techniques grâce à la puissance de l'algorithme et s'entraîner
-            avec des langages reconnus internationalement.</p>
-          <div class="hardskill">
-            <ul>
-              <li>Javascript</li>
-            </ul>
-          </div>
-        </details>
-        <details>
-          <summary>Programmation avancée</summary>
-          <p>Découvrez comment créer des applications web dynamiques exploitant des sources de données externes pour
-            afficher des informations.</p>
-          <div class="hardskill">
-            <ul>
-              <li>React</li>
-              <li>Node</li>
-              <li>SQL</li>
-              <li>Express</li>
-            </ul>
-          </div>
-        </details>
-        <details>
-          <summary>Professionnalisation</summary>
-          <p>Découvrez comment créer une application "fullstack" professionnelle.</p>
-          <div class="hardskill">
-            <ul>
-              <li>REST API</li>
-            </ul>
-          </div>
-        </details>
-      </div>
-    </section>
+    <div id="description">
+      <section class="description">
+        <h1>Apprenez un métier tech, changez de carrière</h1>
+        <p>
+          Tout comme nous, rejoignez l’aventure pour devenir développeur web et
+          mobile. Apprenez à coder avec les technologies les plus recherchées
+          sur le marché : HTML, CSS, JavaScript, React, Node.js, Express.js.
+          <br>
+          Tout cela au campus de la Wild Code School de Reims, swippez vers le
+          bas pour voir la timeline du programme que nous suivons et où nous en
+          sommes.
+        </p>
+        <div>
+          <img src="assets/upward_circle_arrow.png" alt="image settings" draggable="false" id="image-arrow">
+        </div>
+      </section>
+    </div>
 
-    <section class="formulaire">
-      <form action="https://formspree.io/f/xlevbkvy" method="post">
-        <label>contact</label>
-        <input type="text" id="firstname" name="firstname" placeholder="Prénom" required>
-        <input type="text" id="lastname" name="lastname" placeholder="Nom" required>
-        <input type="email" id="email" name="email" placeholder="E-Mail" required>
-        <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
-        <button type="submit">Envoyer</button>
-      </form>
-    </section>
+    <div id="timeline">
+      <section class="timeline">
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+        <div class="timeline-spots">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+        <div class="infos">
+          <details>
+            <summary>Les basiques du web</summary>
+            <p>Découvrez comment sont construites les pages web sur lesquelles vous surfez tous les jours et créez votre
+              première application statique.</p>
+            <div class="hardskill">
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+              </ul>
+            </div>
+          </details>
+          <details>
+            <summary>Algorithmie et fondamentaux de la programmation</summary>
+            <p>Comprendre comment résoudre des problèmes techniques grâce à la puissance de l'algorithme et s'entraîner
+              avec des langages reconnus internationalement.</p>
+            <div class="hardskill">
+              <ul>
+                <li>Javascript</li>
+              </ul>
+            </div>
+          </details>
+          <details>
+            <summary>Programmation avancée</summary>
+            <p>Découvrez comment créer des applications web dynamiques exploitant des sources de données externes pour
+              afficher des informations.</p>
+            <div class="hardskill">
+              <ul>
+                <li>React</li>
+                <li>Node</li>
+                <li>SQL</li>
+                <li>Express</li>
+              </ul>
+            </div>
+          </details>
+          <details>
+            <summary>Professionnalisation</summary>
+            <p>Découvrez comment créer une application "fullstack" professionnelle.</p>
+            <div class="hardskill">
+              <ul>
+                <li>REST API</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </section>
+    </div>
 
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2604.0166788972087!2d4.018001815288719!3d49.25712978050243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e975e4ed302cc7%3A0x836ba7437c081196!2sWild%20Code%20School!5e0!3m2!1sfr!2sfr!4v1664374312415!5m2!1sfr!2sfr"
-      width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div id="formulaire">
+      <section class="formulaire">
+        <form action="https://formspree.io/f/xlevbkvy" method="post">
+          <label>contact</label>
+          <input type="text" id="firstname" name="firstname" placeholder="Prénom" required>
+          <input type="text" id="lastname" name="lastname" placeholder="Nom" required>
+          <input type="email" id="email" name="email" placeholder="E-Mail" required>
+          <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
+          <button type="submit">Envoyer</button>
+        </form>
+      </section>
+    </div>
+
+    <div id="iframe">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2604.0166788972087!2d4.018001815288719!3d49.25712978050243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e975e4ed302cc7%3A0x836ba7437c081196!2sWild%20Code%20School!5e0!3m2!1sfr!2sfr!4v1664374312415!5m2!1sfr!2sfr"
+        width="400" height="90%" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
 
   </main>
-  <footer></footer>
+
+  <footer></footer> 
 </body>
 
 </html>
