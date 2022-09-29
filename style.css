@@ -121,6 +121,10 @@ header h1 {
   }
 }
 
+svg {
+  z-index: 1;
+}
+
 /* ----Fin Description ---- */
 
 /*----Timeline CSS-----*/
