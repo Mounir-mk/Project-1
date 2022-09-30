@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'bainsley';
+  src: url('assets/bainsley');
+}
+
 :root {
   --margin-box: 20px;
 }
@@ -178,7 +183,7 @@ header h1 {
 #timeline {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: calc(100vh - 50px);
   padding: 1rem;
 }
 
@@ -195,8 +200,8 @@ header h1 {
 }
 
 .timeline-status {
-  height: 2rem;
-  width: 2rem;
+  height: 2.5rem;
+  width: 2.5rem;
   margin-right: 1rem;
   background-color: #fff;
   border: 0.3rem solid whitesmoke;
@@ -222,15 +227,33 @@ header h1 {
   position: absolute;
   border-radius: 0 0 1rem 1rem;
   top: 1rem;
-  left: 1rem;
+  left: 1.2rem;
   transform: translateX(-50%);
   z-index: -1;
 }
 
+.timeline-content {}
+
+details {}
+
 summary {
-  height: 2rem;
-  display: flex;
-  align-items: center;
+  padding: 1rem;
+  background-color: whitesmoke;
+  border-radius: 1rem;
+  box-shadow: 0 0.2rem 0 #dcdcdc;
+}
+
+details[open] summary {
+  border-radius: 1rem 1rem 0 0;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.timeline-content p {
+  padding: 1rem;
+  background-color: whitesmoke;
+  margin-bottom: 1rem;
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 0.2rem 0 #dcdcdc;
 }
 
 .hard-skills ul {
@@ -249,7 +272,10 @@ ul img {
 
 .formulaire {
   margin: var(--margin-box);
-  border-radius: 10px;
+  --margin-top: calc(50vh - 50px);
+  --transform: translateY(-50%);
+  --height: calc(100vh - 50px);
+  border-radius: 20px 20px 0 0;
   box-shadow: 0px 0.3rem 0px #dcdcdc;
   background-color: whitesmoke;
 }
@@ -260,12 +286,29 @@ ul img {
   flex-direction: column;
 }
 
-.formulaire label {
+.formulaire h3 {
   display: block;
   text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #f76c6c;
+  color: whitesmoke;
+  font-family: "Varela Round", sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-right: -20px;
+  margin-left: -20px;
+  border-radius: 20px 20px 0 0;
+
+}
+
+.formulaire label {
+  display: block;
   margin-top: 15px;
   margin-bottom: 15px;
-  color: #f76c6c;
+  color: #39424e;
+  font-family: "Varela Round", sans-serif;
+  font-size: 1.2rem;
 }
 
 .formulaire input {
@@ -273,9 +316,12 @@ ul img {
   border: none;
   border-bottom: 4px solid #dcdcdc;
   color: #f76c6c;
+  border-radius: 10px;
 }
 
-#email {
+#email,
+#firstname,
+#lastname {
   margin-top: 10px;
 }
 
