@@ -103,10 +103,14 @@
     <div id="formulaire">
       <section class="formulaire">
         <form action="https://formspree.io/f/xlevbkvy" method="post">
-          <label>contact</label>
+          <h3>contact</h3>
+          <label for="firstname">Prénom</label>
           <input type="text" id="firstname" name="firstname" placeholder="Prénom" required>
+          <label for="lastname">Nom</label>
           <input type="text" id="lastname" name="lastname" placeholder="Nom" required>
+          <label for="email">Email</label>
           <input type="email" id="email" name="email" placeholder="E-Mail" required>
+          <label for="message">Message</label>
           <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
           <button type="submit">Envoyer</button>
         </form>
