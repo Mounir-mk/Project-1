@@ -2,6 +2,7 @@
   font-family: 'bainsley';
   src: url('assets/bainsley');
 }
+
 :root {
   --margin-box: 20px;
 }
@@ -211,14 +212,6 @@ header h1 {
   border-color: #f76c6c;
 }
 
-.timeline-content p{
-  border: 1px solid #dcdcdc;
-  margin-top: 5px;
-  padding: 5px;
-  border-radius: 5px;
-  box-shadow: 0.5rem 0.5rem 10px #dcdcdc;
-}
-
 .progress.complete {
   background-color: #f76c6c;
   box-shadow: 0 0 0;
@@ -240,13 +233,26 @@ header h1 {
 
 .timeline-content {}
 
+details {}
+
 summary {
-  height: 2rem;
-  display: flex;
-  align-items: center;
-  font-family: Bainsley sans-serif ;
-  font-weight: bold;
-  color: #434242;
+  padding: 1rem;
+  background-color: whitesmoke;
+  border-radius: 1rem;
+  box-shadow: 0 0.2rem 0 #dcdcdc;
+}
+
+details[open] summary {
+  border-radius: 1rem 1rem 0 0;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.timeline-content p {
+  padding: 1rem;
+  background-color: whitesmoke;
+  margin-bottom: 1rem;
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 0.2rem 0 #dcdcdc;
 }
 
 /*---- section formulaire ----*/
@@ -285,7 +291,9 @@ summary {
   border-radius: 10px;
 }
 
-#email , #firstname , #lastname{
+#email,
+#firstname,
+#lastname {
   margin-top: 10px;
 }
 
