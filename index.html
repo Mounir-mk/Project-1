@@ -8,21 +8,32 @@
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" />
 </head>
 
 <body>
 
   <script src="script.js"></script>
-  <div id="header">
-    <header>
-      <img class="logo" src="./assets/WCS_logo.png" alt="Logo Wild code school">
-      <h1>The program for the season</h1>
-      <button class="material-symbols-outlined" id="setting-button">
-        settings
-      </button>
-    </header>
-  </div>
+
+  <header>
+    <img class="logo" src="./assets/WCS_logo.png" alt="Logo Wild code school">
+    <h1>The program for the season</h1>
+    <nav class="menu">
+      <input type="checkbox" id="mobile" class="menu-button">
+      <label for="mobile" class="menu-icon">
+        <span class="material-symbols-outlined">
+          settings
+        </span>
+      </label>
+      <div class="dropdown-menu">
+        <a>lien 1</a>
+        <a>lien 2</a>
+        <a>lien 3</a>
+      </div>
+    </nav>
+  </header>
   <main>
     <div id="description">
       <section class="description">
