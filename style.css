@@ -58,8 +58,9 @@ header {
 }
 
 header h1 {
+  font-family: "Varela Round", sans-serif;
   font-size: 1.3rem;
-  color: white;
+  color: #FAF3F3;
   text-align: center;
 }
 
@@ -255,6 +256,18 @@ details[open] summary {
   box-shadow: 0 0.2rem 0 #dcdcdc;
 }
 
+.hard-skills ul {
+  list-style: none;
+}
+
+.soft-skills ul {
+  list-style: none;
+}
+
+ul img {
+  height: 2rem;
+}
+
 /*---- section formulaire ----*/
 
 .formulaire {
@@ -289,7 +302,7 @@ details[open] summary {
 
 }
 
-.formulaire label{
+.formulaire label {
   display: block;
   margin-top: 15px;
   margin-bottom: 15px;
