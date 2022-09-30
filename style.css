@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'bainsley';
+  src: url('assets/bainsley');
+}
 :root {
   --margin-box: 20px;
 }
@@ -170,6 +174,14 @@ svg {
   border-color: #f76c6c;
 }
 
+.timeline-content p{
+  border: 1px solid #dcdcdc;
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0.5rem 0.5rem 10px #dcdcdc;
+}
+
 .progress.complete {
   background-color: #f76c6c;
   box-shadow: 0 0 0;
@@ -195,6 +207,9 @@ summary {
   height: 2rem;
   display: flex;
   align-items: center;
+  font-family: Bainsley sans-serif ;
+  font-weight: bold;
+  color: #434242;
 }
 
 /*---- section formulaire ----*/
@@ -220,6 +235,9 @@ summary {
   margin-top: 15px;
   margin-bottom: 15px;
   color: #f76c6c;
+  font-family: "Varela Round", sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
 .formulaire input {
@@ -230,7 +248,7 @@ summary {
   border-radius: 10px;
 }
 
-#email {
+#email , #firstname , #lastname{
   margin-top: 10px;
 }
 
