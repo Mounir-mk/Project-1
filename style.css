@@ -38,7 +38,6 @@ main {
 /*----HEADER-CSS---*/
 header {
   height: 50px;
-  display: flex;
   align-items: center;
   box-shadow: 0px 5px 5px gray;
   background-color: #f76c6c;
@@ -47,19 +46,24 @@ header {
 }
 
 .logo {
+  position: absolute;
+  left: 1rem;
+  top: 0.5rem;
   height: 2.5rem;
 }
 
 header h1 {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   color: white;
+  text-align: center;
 }
 
 .menu {
   position: absolute;
-  top: 0.8rem;
+  top: 1rem;
   right: 1rem;
   text-align: right;
+
 }
 
 .menu .menu-button {
@@ -77,10 +81,12 @@ header h1 {
 }
 
 .menu input:checked~.dropdown-menu {
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
-  background-color: #dcdcdc;
-  border: 1px solid #39424e;
+  background-color: #f76c6c;
+  color: white;
+  border: 1px solid white;
   border-radius: 5px;
 }
 
@@ -97,6 +103,7 @@ header h1 {
     'GRAD' 0,
     'opsz' 24
 }
+
 
 
 /*-------fin header --------*/
@@ -162,10 +169,6 @@ header h1 {
   60% {
     transform: translateY(-15px);
   }
-}
-
-svg {
-  z-index: 1;
 }
 
 /* ----Fin Description ---- */
