@@ -12,7 +12,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+  background-color: whitesmoke;
+}
 /*----- TEST SCROLL SNAP -------*/
 #header {
   position: sticky;
@@ -198,7 +200,8 @@ header h1 {
   height: 1500px;
   position: relative;
   padding: 1rem;
-  margin-top: 2rem;;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
 }
 
 #progress-bar {
