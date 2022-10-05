@@ -268,8 +268,12 @@ header h1 {
 .hardskills ul,
 .softskills ul {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.hardskills ul img {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 ul li {
@@ -391,6 +395,10 @@ iframe {
   .box.b4 {
     transform: translateX(3rem);
     top: 75%;
+  }
+  .hardskills ul img {
+    width: 2rem;
+    height: 2rem;
   }
 }
 
