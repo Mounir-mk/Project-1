@@ -118,6 +118,7 @@ header h1 {
   height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -175,6 +176,19 @@ header h1 {
   60% {
     transform: translateY(-15px);
   }
+}
+
+.swipe-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.description>.swipe-logo>p {
+  font-family: "Raleway", sans-serif;
+  color: #39424e;
+  font-size: 1.2rem;
 }
 
 /* ----Fin Description ---- */
