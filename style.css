@@ -12,9 +12,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   background-color: whitesmoke;
 }
+
 /*----- TEST SCROLL SNAP -------*/
 #header {
   position: sticky;
@@ -215,9 +217,11 @@ header h1 {
 
 .progress {
   width: 100%;
+  height: 0;
   background-color: #f76c6c;
   border-radius: 1rem;
   box-shadow: 0 0.3rem 0 #cacaca;
+  transition: height 2s;
 }
 
 .circles {
@@ -249,18 +253,21 @@ header h1 {
   border-radius: 50%;
   margin-bottom: calc((1500px - 12rem) / 4);
 }
+
 .circle.complete {
   border: 0.5rem solid #f76c6c;
 }
 
-.box.b1 {
-}
+.box.b1 {}
+
 .box.b2 {
   top: 25%;
 }
+
 .box.b3 {
   top: 50%;
 }
+
 .box.b4 {
   top: 75%;
 }
@@ -268,6 +275,7 @@ header h1 {
 .skills {
   margin-top: 1rem;
 }
+
 .hardskills ul,
 .softskills ul {
   display: flex;
@@ -307,7 +315,7 @@ ul li {
   display: flex;
   flex-direction: column;
   height: calc(100vh - 100px);
-margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .formulaire h3 {
@@ -386,25 +394,31 @@ iframe {
     margin-left: 50%;
     transform: translateX(-50%);
   }
+
   .circles {
     left: 50%;
     transform: translateX(-50%);
   }
+
   .box {
     left: 50%;
     transform: translateX(-50%);
   }
+
   .box.b1 {
     transform: translateX(calc(-100% - 3rem));
   }
+
   .box.b2 {
     transform: translateX(3rem);
     top: 25%;
   }
+
   .box.b3 {
     transform: translateX(calc(-100% - 3rem));
     top: 50%;
   }
+
   .box.b4 {
     transform: translateX(3rem);
     top: 75%;
@@ -420,7 +434,8 @@ iframe {
     width: 2rem;
     height: 2rem;
   }
-   main {
+
+  main {
     scroll-snap-type: none;
   }
 
@@ -444,19 +459,20 @@ iframe {
     margin: 0 20px 20px 20px;
   }
 
-  #iframe {    
+  #iframe {
     height: calc(100vh - 50px);
     display: flex;
     justify-content: center;
     align-items: center;
-    }
+  }
 
-    iframe{
-      padding : 0;
-    }
-    #iframe{
-      width: 50vw;
-    }
+  iframe {
+    padding: 0;
+  }
+
+  #iframe {
+    width: 50vw;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -469,13 +485,17 @@ iframe {
   .box {
     max-width: 600px;
   }
+
   .description .swipe-logo {
     display: none;
   }
+
   .description svg {
     margin: -30px;
   }
-  .description h1, .description p {
+
+  .description h1,
+  .description p {
     margin-bottom: auto;
   }
 }
