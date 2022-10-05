@@ -368,3 +368,16 @@ iframe {
 /*---- fin de section de formulaire ----*/
 
 /*-------------FOOTER ------------- */
+@media screen and (min-width: 768px) {
+  main {
+    scroll-snap-type: none;
+  }
+
+  #description,
+  #timeline,
+  #formulaire,
+  #iframe {
+    scroll-snap-align: none;
+  }
+
+}
