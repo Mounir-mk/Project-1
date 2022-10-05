@@ -195,92 +195,86 @@ header h1 {
 
 /*----Timeline CSS-----*/
 #timeline {
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh - 50px);
-  padding: 1rem;
-  overflow: scroll;
-}
-
-/*
-#timeline * {
-  border: 1px solid black
-}*/
-
-.timeline-object {
-  display: grid;
-  grid-template-columns: 1fr 5fr;
+  height: 1500px;
   position: relative;
-  height: 25vh;
+  padding: 1rem;
+  margin-top: 2rem;;
 }
 
-.timeline-status {
-  height: 2.5rem;
-  width: 2.5rem;
-  margin-right: 1rem;
-  background-color: #fff;
-  border: 0.3rem solid whitesmoke;
-  border-radius: 50%;
-}
-
-.timeline-object.complete .timeline-status {
-  background-color: #f76c6c;
-  border-color: #f76c6c;
-}
-
-.progress.complete {
-  background-color: #f76c6c;
-  box-shadow: 0 0 0;
+#progress-bar {
+  width: 1rem;
+  height: 100%;
+  background-color: #dcdcdc;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
 }
 
 .progress {
-  content: '';
-  width: 1rem;
-  height: 25vh;
-  background-color: whitesmoke;
-  box-shadow: 0.2rem 0 0 #dcdcdc inset;
-  position: absolute;
-  border-radius: 0 0 1rem 1rem;
-  top: 1rem;
-  left: 1.2rem;
-  transform: translateX(-50%);
-  z-index: -1;
-}
-
-.timeline-content {}
-
-details {}
-
-summary {
-  padding: 1rem;
-  background-color: whitesmoke;
+  width: 100%;
+  background-color: #f76c6c;
   border-radius: 1rem;
-  box-shadow: 0 0.2rem 0 #dcdcdc;
+  box-shadow: 0 0.3rem 0 #cacaca;
 }
 
-details[open] summary {
-  border-radius: 1rem 1rem 0 0;
-  border-bottom: 1px solid #dcdcdc;
+.circles {
+  position: absolute;
+  top: 0;
+  height: 1500px;
+  display: flex;
+  flex-direction: column;
+  /*opacity: 0.50*/
 }
 
-.timeline-content p {
+.box {
+  position: absolute;
+  left: 6rem;
+  top: 0;
+  max-width: 400px;
   padding: 1rem;
-  background-color: whitesmoke;
-  margin-bottom: 1rem;
-  border-radius: 0 0 1rem 1rem;
-  box-shadow: 0 0.2rem 0 #dcdcdc;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 0.3rem 0 #dcdcdc;
+  transition: transform 0.5s;
 }
 
-.hard-skills ul {
+.circle {
+  width: 3rem;
+  height: 3rem;
+  background-color: white;
+  border: 0.5rem solid #dcdcdc;
+  border-radius: 50%;
+  margin-bottom: calc((1500px - 12rem) / 4);
+}
+.circle.complete {
+  border: 0.5rem solid #f76c6c;
+}
+
+.box.b1 {
+}
+.box.b2 {
+  top: 25%;
+}
+.box.b3 {
+  top: 50%;
+}
+.box.b4 {
+  top: 75%;
+}
+
+.skills {
+  margin-top: 1rem;
+}
+.hardskills ul,
+.softskills ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+ul li {
   list-style: none;
-}
-
-.soft-skills ul {
-  list-style: none;
-}
-
-ul img {
-  height: 2rem;
+  padding: 0.5rem;
 }
 
 /*---- section formulaire ----*/
@@ -369,3 +363,45 @@ iframe {
 /*---- fin de section de formulaire ----*/
 
 /*-------------FOOTER ------------- */
+/*-----MEDIA-----*/
+@media screen and (min-width: 768px) {
+  #progress-bar {
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  .circles {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .box {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .box.b1 {
+    transform: translateX(calc(-100% - 3rem));
+  }
+  .box.b2 {
+    transform: translateX(3rem);
+    top: 25%;
+  }
+  .box.b3 {
+    transform: translateX(calc(-100% - 3rem));
+    top: 50%;
+  }
+  .box.b4 {
+    transform: translateX(3rem);
+    top: 75%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .box {
+    max-width: 300px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .box {
+    max-width: 600px;
+  }
+}
