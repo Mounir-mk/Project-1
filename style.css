@@ -152,7 +152,7 @@ header h1 {
   color: #39424e;
   width: 80%;
   font-size: 1.1rem;
-  padding-bottom: 2.5rem;
+  padding-bottom: .5rem;
 }
 
 #image-arrow {
@@ -272,6 +272,12 @@ header h1 {
 .softskills ul {
   display: flex;
   flex-wrap: wrap;
+}
+
+.softskills ul img {
+  margin: .5rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .hardskills ul img {
@@ -400,6 +406,13 @@ iframe {
     transform: translateX(3rem);
     top: 75%;
   }
+
+  .softskills ul img {
+    margin: 2.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
   .hardskills ul img {
     width: 2rem;
     height: 2rem;
