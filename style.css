@@ -46,7 +46,6 @@ main {
 header {
   height: 50px;
   align-items: center;
-  box-shadow: 0px 5px 5px gray;
   background-color: #f76c6c;
   padding: 1rem;
   gap: 1rem;
@@ -429,6 +428,7 @@ iframe {
 
   .formulaire form {
     margin: 0 20px 20px 20px;
+    justify-content: space-around;
   }
 
   #iframe {    
@@ -439,7 +439,8 @@ iframe {
     }
 
     iframe{
-      padding : 0;
+      padding : 20px;
+      height: 100%;
     }
     #iframe{
       width: 50vw;
