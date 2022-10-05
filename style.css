@@ -367,6 +367,7 @@ iframe {
 /*---- fin de section de formulaire ----*/
 
 /*-------------FOOTER ------------- */
+
 /*-----MEDIA-----*/
 @media screen and (min-width: 768px) {
   #progress-bar {
@@ -400,6 +401,36 @@ iframe {
     width: 2rem;
     height: 2rem;
   }
+   main {
+    scroll-snap-type: none;
+  }
+
+  #description,
+  #timeline,
+  #formulaire,
+  #iframe {
+    scroll-snap-align: none;
+  }
+
+  #formulaire {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .formulaire {
+    width: 60vw;
+    height: fit-content;
+  }
+
+  .formulaire form {
+    margin: 0 20px 20px 20px;
+  }
+
+  #iframe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
