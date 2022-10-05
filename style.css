@@ -242,7 +242,12 @@ header h1 {
   background-color: white;
   border-radius: 1rem;
   box-shadow: 0 0.3rem 0 #dcdcdc;
-  transition: transform 0.5s;
+  opacity: 0;
+}
+
+.scrolled {
+  opacity: 1;
+  transition: opacity 1.5s;
 }
 
 .circle {
