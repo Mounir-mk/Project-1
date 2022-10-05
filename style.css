@@ -380,4 +380,23 @@ iframe {
     scroll-snap-align: none;
   }
 
+  #formulaire {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .formulaire {
+    width: 60vw;
+    height: fit-content;
+  }
+
+  .formulaire form {
+    margin: 0 20px 20px 20px;
+  }
+
+  #iframe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
