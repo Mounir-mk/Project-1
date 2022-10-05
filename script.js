@@ -55,8 +55,17 @@ if (pourcentage >= 52) {
 //Scroll anime part: progress bar
 
 document.getElementsByTagName('main')[0].addEventListener('scroll', () => {
+
   const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
   if (progressBar.getBoundingClientRect().top < windowHeight / 2) {
     progressBar.style.height = `${parseInt(reCalcPourcentage)}%`;
   }
+  document.querySelectorAll(".box").forEach((element) => {
+    if (element.getBoundingClientRect().top < windowHeight / 2) {
+      if (!element.classList.contains("scrolled")) {
+        element.classList.toggle("scrolled");
+      }
+    }
+  });
 });
