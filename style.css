@@ -443,4 +443,13 @@ iframe {
   .box {
     max-width: 600px;
   }
+  .description .swipe-logo {
+    display: none;
+  }
+  .description svg {
+    margin: -30px;
+  }
+  .description h1, .description p {
+    margin-bottom: auto;
+  }
 }
