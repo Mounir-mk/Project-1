@@ -12,9 +12,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   background-color: whitesmoke;
 }
+
 /*----- TEST SCROLL SNAP -------*/
 #header {
   position: sticky;
@@ -151,7 +153,7 @@ header h1 {
   color: #39424e;
   width: 80%;
   font-size: 1.1rem;
-  padding-bottom: 2.5rem;
+  padding-bottom: .5rem;
 }
 
 #image-arrow {
@@ -214,9 +216,11 @@ header h1 {
 
 .progress {
   width: 100%;
+  height: 0;
   background-color: #f76c6c;
   border-radius: 1rem;
   box-shadow: 0 0.3rem 0 #cacaca;
+  transition: height 2s;
 }
 
 .circles {
@@ -237,7 +241,12 @@ header h1 {
   background-color: white;
   border-radius: 1rem;
   box-shadow: 0 0.3rem 0 #dcdcdc;
-  transition: transform 0.5s;
+  opacity: 0;
+}
+
+.scrolled {
+  opacity: 1;
+  transition: opacity 1.5s;
 }
 
 .circle {
@@ -248,18 +257,21 @@ header h1 {
   border-radius: 50%;
   margin-bottom: calc((1500px - 12rem) / 4);
 }
+
 .circle.complete {
   border: 0.5rem solid #f76c6c;
 }
 
-.box.b1 {
-}
+.box.b1 {}
+
 .box.b2 {
   top: 25%;
 }
+
 .box.b3 {
   top: 50%;
 }
+
 .box.b4 {
   top: 75%;
 }
@@ -267,10 +279,17 @@ header h1 {
 .skills {
   margin-top: 1rem;
 }
+
 .hardskills ul,
 .softskills ul {
   display: flex;
   flex-wrap: wrap;
+}
+
+.softskills ul img {
+  margin: .5rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .hardskills ul img {
@@ -300,7 +319,7 @@ ul li {
   display: flex;
   flex-direction: column;
   height: calc(100vh - 100px);
-margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .formulaire h3 {
@@ -379,34 +398,48 @@ iframe {
     margin-left: 50%;
     transform: translateX(-50%);
   }
+
   .circles {
     left: 50%;
     transform: translateX(-50%);
   }
+
   .box {
     left: 50%;
     transform: translateX(-50%);
   }
+
   .box.b1 {
     transform: translateX(calc(-100% - 3rem));
   }
+
   .box.b2 {
     transform: translateX(3rem);
     top: 25%;
   }
+
   .box.b3 {
     transform: translateX(calc(-100% - 3rem));
     top: 50%;
   }
+
   .box.b4 {
     transform: translateX(3rem);
     top: 75%;
   }
+
+  .softskills ul img {
+    margin: 2.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
   .hardskills ul img {
     width: 2rem;
     height: 2rem;
   }
-   main {
+
+  main {
     scroll-snap-type: none;
   }
 
@@ -431,12 +464,12 @@ iframe {
     justify-content: space-around;
   }
 
-  #iframe {    
+  #iframe {
     height: calc(100vh - 50px);
     display: flex;
     justify-content: center;
     align-items: center;
-    }
+  }
 
     iframe{
       padding : 20px;
@@ -457,13 +490,17 @@ iframe {
   .box {
     max-width: 600px;
   }
+
   .description .swipe-logo {
     display: none;
   }
+
   .description svg {
     margin: -30px;
   }
-  .description h1, .description p {
+
+  .description h1,
+  .description p {
     margin-bottom: auto;
   }
 }
