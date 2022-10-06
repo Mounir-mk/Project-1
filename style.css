@@ -82,6 +82,7 @@ header h2 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  overflow: scroll;
 }
 
 .description h1 {
