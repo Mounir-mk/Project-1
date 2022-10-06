@@ -32,7 +32,6 @@ main {
 
 
 #description,
-#timeline,
 #formulaire,
 #iframe {
   width: 100%;
@@ -41,7 +40,12 @@ main {
   flex: none;
 }
 
-
+#timeline{
+  width: 100%;
+  height: calc(100vh - 50px);
+  scroll-snap-align: start;
+  flex: none;
+}
 /*----- FIN TEST SCROLL SNAP -------*/
 
 /*----HEADER-CSS---*/
