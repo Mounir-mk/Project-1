@@ -35,7 +35,6 @@ main {
 
 
 #description,
-#timeline,
 #formulaire,
 #iframe {
   width: 100%;
@@ -44,7 +43,12 @@ main {
   flex: none;
 }
 
-
+#timeline{
+  width: 100%;
+  height: calc(100vh - 50px);
+  scroll-snap-align: start;
+  flex: none;
+}
 /*----- FIN TEST SCROLL SNAP -------*/
 
 /*----HEADER-CSS---------------------------------------------------------------------------*/
@@ -416,6 +420,7 @@ iframe {
 
   .formulaire form {
     margin: 0 20px 20px 20px;
+    justify-content: space-around;
   }
 
   #iframe {
@@ -425,13 +430,13 @@ iframe {
     align-items: center;
   }
 
-  iframe {
-    padding: 0;
-  }
-
-  #iframe {
-    width: 50vw;
-  }
+    iframe{
+      padding : 20px;
+      height: 100%;
+    }
+    #iframe{
+      width: 50vw;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
