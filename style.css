@@ -115,6 +115,16 @@ header h2 {
   padding-bottom: .5rem;
 }
 
+.softskills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 3rem;
+}
+
+#text-next {
+  text-align: center;
+}
+
 #image-arrow {
   height: 70px;
   width: 70px;
@@ -239,16 +249,9 @@ header h2 {
   margin-top: 1rem;
 }
 
-.hardskills ul,
-.softskills ul {
+.hardskills ul {
   display: flex;
   flex-wrap: wrap;
-}
-
-.softskills ul img {
-  margin: .5rem;
-  width: 2.5rem;
-  height: 2.5rem;
 }
 
 .hardskills ul img {
@@ -387,10 +390,9 @@ iframe {
     top: 75%;
   }
 
-  .softskills ul img {
-    margin: 2.5rem;
-    width: 3.5rem;
-    height: 3.5rem;
+  .softskills {
+    display: flex;
+    flex-direction: row;
   }
 
   .hardskills ul img {
@@ -458,8 +460,4 @@ iframe {
     margin: -30px;
   }
 
-  .description h1,
-  .description p {
-    margin-bottom: auto;
-  }
 }
