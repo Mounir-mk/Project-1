@@ -52,9 +52,9 @@ if (pourcentage >= 52) {
   allCircles[0].classList.toggle("complete");
 }
 
-//Scroll anime part: progress bar
+//Scroll anime part: progress bar & Box
 
-document.getElementsByTagName('main')[0].addEventListener('scroll', () => {
+document.querySelector('main').addEventListener('scroll', () => {
 
   const windowHeight = window.innerHeight || document.documentElement.clientHeight;
 

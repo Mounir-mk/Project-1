@@ -5,8 +5,11 @@
 
 :root {
   --margin-box: 20px;
+  --main-color: #f76c6c;
 }
-
+html {
+  height: -webkit-fill-available;;
+}
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +20,7 @@ body {
   background-color: whitesmoke;
 }
 
-/*----- TEST SCROLL SNAP -------*/
+/*----- TEST SCROLL SNAP --------------------------------------------------------------------*/
 #header {
   position: sticky;
 }
@@ -48,79 +51,31 @@ main {
 }
 /*----- FIN TEST SCROLL SNAP -------*/
 
-/*----HEADER-CSS---*/
+/*----HEADER-CSS---------------------------------------------------------------------------*/
 header {
   height: 50px;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-  background-color: #f76c6c;
+  box-shadow: 0px 5px 0px #dcdcdc;
+  background-color: var(--main-color);
   padding: 1rem;
   gap: 1rem;
 }
 
-.logo {
-  position: absolute;
-  left: 1rem;
-  top: 0.5rem;
-  height: 2.5rem;
+header .logo {
+  width: 2rem;
+  height: 2rem;
 }
 
-header h1 {
+header h2 {
   font-family: "Varela Round", sans-serif;
-  font-size: 1.3rem;
-  color: #FAF3F3;
-  text-align: center;
+  font-size: 1.5rem;
+  color: #fff;
 }
+/*-------fin header ------------------------------------------------------------------------*/
 
-.menu {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  text-align: right;
-
-}
-
-.menu .menu-button {
-  display: block;
-  position: absolute;
-  z-index: -1;
-  right: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.menu-icon {
-  display: block;
-  float: right;
-}
-
-.menu input:checked~.dropdown-menu {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  background-color: #f76c6c;
-  color: white;
-  border: 1px solid white;
-  border-radius: 5px;
-}
-
-.menu input~.dropdown-menu {
-  clear: both;
-  display: none;
-}
-
-.material-symbols-outlined {
-  color: white;
-  font-variation-settings:
-    'FILL' 0,
-    'wght' 300,
-    'GRAD' 0,
-    'opsz' 24
-}
-
-
-
-/*-------fin header --------*/
-/*-------section description --------*/
+/*-------section description ---------------------------------------------------------------*/
 .description {
   height: calc(100vh - 50px);
   display: flex;
@@ -149,7 +104,7 @@ header h1 {
   right: 0;
   margin: auto;
   border-radius: 8px;
-  background-color: #f76c6c;
+  background-color: var(--main-color);
 }
 
 .description>p {
@@ -198,9 +153,9 @@ header h1 {
   font-size: 1.2rem;
 }
 
-/* ----Fin Description ---- */
+/* ----Fin Description ------------------------------------------------------------------- */
 
-/*----Timeline CSS-----*/
+/*----Timeline CSS-------------------------------------------------------------------------*/
 #timeline {
   height: 1500px;
   position: relative;
@@ -221,7 +176,7 @@ header h1 {
 .progress {
   width: 100%;
   height: 0;
-  background-color: #f76c6c;
+  background-color: var(--main-color);
   border-radius: 1rem;
   box-shadow: 0 0.3rem 0 #cacaca;
   transition: height 2s;
@@ -263,7 +218,7 @@ header h1 {
 }
 
 .circle.complete {
-  border: 0.5rem solid #f76c6c;
+  border: 0.5rem solid var(--main-color);
 }
 
 .box.b1 {}
@@ -306,7 +261,7 @@ ul li {
   padding: 0.5rem;
 }
 
-/*---- section formulaire ----*/
+/*---- section formulaire ----------------------------------------------------------------------------*/
 
 .formulaire {
   margin: var(--margin-box);
@@ -331,7 +286,7 @@ ul li {
   text-align: center;
   padding-top: 15px;
   padding-bottom: 15px;
-  background-color: #f76c6c;
+  background-color: var(--main-color);
   color: whitesmoke;
   font-family: "Varela Round", sans-serif;
   font-size: 1.3rem;
@@ -355,7 +310,7 @@ ul li {
   padding: 10px;
   border: none;
   border-bottom: 4px solid #dcdcdc;
-  color: #f76c6c;
+  color: var(--main-color);
   border-radius: 10px;
 }
 
@@ -371,7 +326,7 @@ ul li {
   padding: 10px;
   resize: none;
   border: 3px solid #dcdcdc;
-  color: #f76c6c;
+  color: var(--main-color);
 }
 
 .formulaire form button {
@@ -382,7 +337,7 @@ ul li {
   border-radius: 10px;
   border: none;
   min-width: 20vw;
-  background-color: #f76c6c;
+  background-color: var(--main-color);
   color: white;
 }
 
@@ -392,11 +347,11 @@ iframe {
   margin: calc(10% / 2);
 }
 
-/*---- fin de section de formulaire ----*/
+/*---- fin de section de formulaire ----------------------------------------------------*/
 
-/*-------------FOOTER ------------- */
+/*-------------FOOTER ----------------------------------------------------------------- */
 
-/*-----MEDIA-----*/
+/*-----MEDIA----------------------------------------------------------------------------*/
 @media screen and (min-width: 768px) {
   #progress-bar {
     margin-left: 50%;
