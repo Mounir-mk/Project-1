@@ -353,6 +353,9 @@ iframe {
 
 /*-----MEDIA----------------------------------------------------------------------------*/
 @media screen and (min-width: 768px) {
+  header{
+    justify-content: flex-start;
+  }
   #progress-bar {
     margin-left: 50%;
     transform: translateX(-50%);
@@ -452,10 +455,6 @@ iframe {
 
   .description .swipe-logo {
     display: none;
-  }
-
-  .description svg {
-    margin: -30px;
   }
 
   .description h1,
