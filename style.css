@@ -121,10 +121,6 @@ header h2 {
   grid-column-gap: 3rem;
 }
 
-#text-next {
-  text-align: center;
-}
-
 #image-arrow {
   height: 70px;
   width: 70px;
@@ -396,6 +392,10 @@ iframe {
   .softskills {
     display: flex;
     flex-direction: row;
+  }
+
+  .softskills img {
+    width: 3.5rem;
   }
 
   .hardskills ul img {
