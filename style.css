@@ -81,7 +81,7 @@ header h2 {
 }
 
 h1, h2, h3 {
-  font-family: 'Montserrat';
+  font-family: "montserrat", sans-serif;
 }
 p {
   font-family: 'lato';
@@ -271,6 +271,7 @@ ul li {
 }
 
 .formulaire label {
+  font-family: "montserrat", sans-serif;
   display: block;
   margin-top: 15px;
   margin-bottom: 15px;
