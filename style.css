@@ -21,8 +21,8 @@ body {
 }
 
 /*----- TEST SCROLL SNAP --------------------------------------------------------------------*/
-#header {
-  position: sticky;
+/*#header {
+  --position: sticky;
 }
 
 main {
@@ -42,7 +42,7 @@ main {
   scroll-snap-align: center;
   flex: none;
 }
-
+*/
 #timeline{
   width: 100%;
   height: calc(100vh - 50px);
@@ -55,11 +55,11 @@ main {
 header {
   height: 50px;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   box-shadow: 0px 5px 0px #dcdcdc;
   background-color: var(--main-color);
-  padding: 1rem;
+  padding: 2rem;
   gap: 1rem;
 }
 
@@ -70,7 +70,7 @@ header .logo {
 
 header h2 {
   font-family: "Varela Round", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #fff;
 }
 /*-------fin header ------------------------------------------------------------------------*/
@@ -80,11 +80,12 @@ header h2 {
   height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
 .description h1 {
+  margin-top: 2rem;
   position: relative;
   font-family: "Varela Round", sans-serif;
   color: #39424e;
@@ -119,6 +120,7 @@ header h2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 3rem;
+  margin: 2rem;
 }
 
 #image-arrow {
@@ -201,7 +203,7 @@ header h2 {
   position: absolute;
   left: 6rem;
   top: 0;
-  max-width: 400px;
+  max-width: 80vw;
   padding: 1rem;
   background-color: white;
   border-radius: 1rem;
@@ -353,6 +355,22 @@ iframe {
 /*-----MEDIA----------------------------------------------------------------------------*/
 @media screen and (min-width: 768px) {
   header{
+    padding: 3rem;
+  }
+  header h2{
+    font-size: 1.5rem;
+  }
+
+  .description{
+    margin-bottom: 50px;
+  }
+  .softskills{
+    margin: 5rem;
+  }
+  .swipe-logo{
+    margin-bottom: 50px;
+  }
+  header{
     justify-content: flex-start;
   }
   #progress-bar {
@@ -446,13 +464,13 @@ iframe {
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .box {
-    max-width: 300px;
+    max-width: 40vw;
   }
 }
 
 @media screen and (min-width: 992px) {
   .box {
-    max-width: 600px;
+    max-width: 40vw;
   }
 
   .description .swipe-logo {
