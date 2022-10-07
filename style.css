@@ -30,19 +30,24 @@ p {
 
 :root {
   --margin-box: 20px;
+  --main-color: #f76c6c;
 }
-
+html {
+  height: -webkit-fill-available;;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   background-color: whitesmoke;
 }
-/*----- TEST SCROLL SNAP -------*/
-#header {
-  position: sticky;
+
+/*----- TEST SCROLL SNAP --------------------------------------------------------------------*/
+/*#header {
+  --position: sticky;
 }
 
 main {
@@ -55,7 +60,6 @@ main {
 
 
 #description,
-#timeline,
 #formulaire,
 #iframe {
   width: 100%;
@@ -63,95 +67,51 @@ main {
   scroll-snap-align: center;
   flex: none;
 }
-
-
+*/
+#timeline{
+  width: 100%;
+  height: calc(100vh - 50px);
+  scroll-snap-align: start;
+  flex: none;
+}
 /*----- FIN TEST SCROLL SNAP -------*/
 
-/*----HEADER-CSS---*/
+/*----HEADER-CSS---------------------------------------------------------------------------*/
 header {
   height: 50px;
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
-  box-shadow: 0px 5px 5px gray;
-  background-color: #f76c6c;
-  padding: 1rem;
+  box-shadow: 0px 5px 0px #dcdcdc;
+  background-color: var(--main-color);
+  padding: 2rem;
   gap: 1rem;
 }
 
-.logo {
-  position: absolute;
-  left: 1rem;
-  top: 0.5rem;
-  height: 2.5rem;
+header .logo {
+  width: 2rem;
+  height: 2rem;
 }
 
-header h1 {
+header h2 {
   font-family: "montserrat", sans-serif;
-  letter-spacing: 1px;
-  font-size: 1.8rem;
-  font-size: 1.3rem;
-  color: #FAF3F3;
-  text-align: center;
-}
-
-.menu {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  text-align: right;
+  font-size: 1.2rem;
+  color: #fff;
 
 }
+/*-------fin header ------------------------------------------------------------------------*/
 
-.menu .menu-button {
-  display: block;
-  position: absolute;
-  z-index: -1;
-  right: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.menu-icon {
-  display: block;
-  float: right;
-}
-
-.menu input:checked~.dropdown-menu {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  background-color: #f76c6c;
-  color: white;
-  border: 1px solid white;
-  border-radius: 5px;
-}
-
-.menu input~.dropdown-menu {
-  clear: both;
-  display: none;
-}
-
-.material-symbols-outlined {
-  color: white;
-  font-variation-settings:
-    'FILL' 0,
-    'wght' 300,
-    'GRAD' 0,
-    'opsz' 24
-}
-
-
-
-/*-------fin header --------*/
-/*-------section description --------*/
+/*-------section description ---------------------------------------------------------------*/
 .description {
   height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
 .description h1 {
+  margin-top: 2rem;
   position: relative;
   font-family: "montserrat", sans-serif;
   color: #39424e;
@@ -171,7 +131,7 @@ header h1 {
   right: 0;
   margin: auto;
   border-radius: 8px;
-  background-color: #f76c6c;
+  background-color: var(--main-color);
 }
 
 .description>p {
@@ -179,7 +139,14 @@ header h1 {
   color: #39424e;
   width: 80%;
   font-size: 1.1rem;
-  padding-bottom: 2.5rem;
+  padding-bottom: .5rem;
+}
+
+.softskills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 3rem;
+  margin: 2rem;
 }
 
 #image-arrow {
@@ -220,9 +187,9 @@ header h1 {
   font-size: 1.2rem;
 }
 
-/* ----Fin Description ---- */
+/* ----Fin Description ------------------------------------------------------------------- */
 
-/*----Timeline CSS-----*/
+/*----Timeline CSS-------------------------------------------------------------------------*/
 #timeline {
   height: 1500px;
   position: relative;
@@ -242,9 +209,11 @@ header h1 {
 
 .progress {
   width: 100%;
-  background-color: #f76c6c;
+  height: 0;
+  background-color: var(--main-color);
   border-radius: 1rem;
   box-shadow: 0 0.3rem 0 #cacaca;
+  transition: height 2s;
 }
 
 .circles {
@@ -260,12 +229,17 @@ header h1 {
   position: absolute;
   left: 6rem;
   top: 0;
-  max-width: 400px;
+  max-width: 80vw;
   padding: 1rem;
   background-color: white;
   border-radius: 1rem;
   box-shadow: 0 0.3rem 0 #dcdcdc;
-  transition: transform 0.5s;
+  opacity: 0;
+}
+
+.scrolled {
+  opacity: 1;
+  transition: opacity 1.5s;
 }
 
 .circle {
@@ -276,19 +250,19 @@ header h1 {
   border-radius: 50%;
   margin-bottom: calc((1500px - 12rem) / 4);
 }
+
 .circle.complete {
-  border: 0.5rem solid #f76c6c;
+  border: 0.5rem solid var(--main-color);
 }
 
-.box.b1 {
-  
-}
 .box.b2 {
   top: 25%;
 }
+
 .box.b3 {
   top: 50%;
 }
+
 .box.b4 {
   top: 75%;
 }
@@ -296,8 +270,8 @@ header h1 {
 .skills {
   margin-top: 1rem;
 }
-.hardskills ul,
-.softskills ul {
+
+.hardskills ul {
   display: flex;
   flex-wrap: wrap;
 }
@@ -312,22 +286,24 @@ ul li {
   padding: 0.5rem;
 }
 
-/*---- section formulaire ----*/
+/*---- section formulaire ----------------------------------------------------------------------------*/
 
 .formulaire {
   margin: var(--margin-box);
   --margin-top: calc(50vh - 50px);
   --transform: translateY(-50%);
-  --height: calc(100vh - 50px);
+  height: calc(100vh - 100px);
   border-radius: 20px 20px 0 0;
   box-shadow: 0px 0.3rem 0px #dcdcdc;
-  background-color: whitesmoke;
+  background-color: #dd0b0b0d;
 }
 
 .formulaire form {
   margin: 20px;
   display: flex;
   flex-direction: column;
+  height: calc(100vh - 100px);
+  margin-bottom: 0;
 }
 
 .formulaire h3 {
@@ -335,7 +311,7 @@ ul li {
   text-align: center;
   padding-top: 15px;
   padding-bottom: 15px;
-  background-color: #f76c6c;
+  background-color: var(--main-color);
   color: whitesmoke;
   font-family: "montserrat, sans-serif";
   letter-spacing: 15px;
@@ -360,7 +336,7 @@ ul li {
   padding: 10px;
   border: none;
   border-bottom: 4px solid #dcdcdc;
-  color: #f76c6c;
+  color: var(--main-color);
   border-radius: 10px;
 }
 
@@ -376,7 +352,7 @@ ul li {
   padding: 10px;
   resize: none;
   border: 3px solid #dcdcdc;
-  color: #f76c6c;
+  color: var(--main-color);
 }
 
 .formulaire form button {
@@ -387,60 +363,96 @@ ul li {
   border-radius: 10px;
   border: none;
   min-width: 20vw;
-  background-color: #f76c6c;
+  background-color: var(--main-color);
   color: white;
 }
 
 iframe {
   max-width: 100%;
   padding: var(--margin-box);
+  margin: calc(10% / 2);
 }
 
-/*---- fin de section de formulaire ----*/
+/*---- fin de section de formulaire ----------------------------------------------------*/
 
-/*-------------FOOTER ------------- */
+/*-------------FOOTER ----------------------------------------------------------------- */
 
-/*-----MEDIA-----*/
+/*-----MEDIA----------------------------------------------------------------------------*/
 @media screen and (min-width: 768px) {
+  header{
+    padding: 3rem;
+  }
+  header h2{
+    font-size: 1.5rem;
+  }
+
+  .description{
+    margin-bottom: 50px;
+  }
+  .softskills{
+    margin: 5rem;
+  }
+  .swipe-logo{
+    margin-bottom: 50px;
+  }
+  header{
+    justify-content: flex-start;
+  }
   #progress-bar {
     margin-left: 50%;
     transform: translateX(-50%);
   }
+
   .circles {
     left: 50%;
     transform: translateX(-50%);
   }
+
   .box {
     left: 50%;
     transform: translateX(-50%);
   }
+
   .box.b1 {
     transform: translateX(calc(-100% - 3rem));
   }
+
   .box.b2 {
     transform: translateX(3rem);
     top: 25%;
   }
+
   .box.b3 {
     transform: translateX(calc(-100% - 3rem));
     top: 50%;
   }
+
   .box.b4 {
     transform: translateX(3rem);
     top: 75%;
   }
+
+  .softskills {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .softskills img {
+    width: 3.5rem;
+  }
+
   .hardskills ul img {
     width: 2rem;
     height: 2rem;
   }
-   main {
+
+  main {
     scroll-snap-type: none;
   }
 
   #description,
   #timeline,
-  #formulaire,
-  #iframe {
+  #formulaire {
     scroll-snap-align: none;
   }
 
@@ -450,38 +462,44 @@ iframe {
   }
 
   .formulaire {
-    width: 60vw;
-    height: fit-content;
+    width: 30vw;
+    --height: fit-content;
   }
 
   .formulaire form {
     margin: 0 20px 20px 20px;
+    justify-content: space-around;
   }
 
   #iframe {
+    height: calc(100vh - 50px);
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+    iframe{
+      padding : 20px;
+      height: 100%;
+    }
+    #iframe{
+      width: 50vw;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .box {
-    max-width: 300px;
+    max-width: 40vw;
   }
 }
 
 @media screen and (min-width: 992px) {
   .box {
-    max-width: 600px;
+    max-width: 40vw;
   }
+
   .description .swipe-logo {
     display: none;
   }
-  .description svg {
-    margin: -30px;
-  }
-  .description h1, .description p {
-    margin-bottom: auto;
-  }
+
 }

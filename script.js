@@ -28,9 +28,9 @@ if (pourcentage >= 0 && pourcentage <= 19) {
 //Select the class of the progress bar
 let progressBar = document.querySelector(".progress");
 
-daysDone < totalDays
-  ? (progressBar.style.height = `${parseInt(reCalcPourcentage)}%`)
-  : (progressBar.style.height = "100%");
+//daysDone < totalDays
+//  ? (progressBar.style.height = `0`)
+// : (progressBar.style.height = "100%");
 
 // Search for class circle
 
@@ -51,3 +51,21 @@ if (pourcentage >= 52) {
 } else {
   allCircles[0].classList.toggle("complete");
 }
+
+//Scroll anime part: progress bar & Box
+
+//document.querySelector('main').addEventListener('scroll', () => {
+window.addEventListener("scroll" , () => {
+  const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+  if (progressBar.getBoundingClientRect().top < windowHeight / 2) {
+    progressBar.style.height = `${parseInt(reCalcPourcentage)}%`;
+  }
+  document.querySelectorAll(".box").forEach((element) => {
+    if (element.getBoundingClientRect().top < windowHeight / 2) {
+      if (!element.classList.contains("scrolled")) {
+        element.classList.toggle("scrolled");
+      }
+    }
+  });
+});
