@@ -320,6 +320,11 @@ iframe {
   margin: calc(10% / 2);
 }
 
+.iframe{
+  width: 90%;
+  height: 90%;
+  padding: 0;
+}
 /*---- fin de section de formulaire ----------------------------------------------------*/
 
 /*-------------FOOTER ----------------------------------------------------------------- */
@@ -409,7 +414,7 @@ iframe {
   }
 
   .formulaire {
-    width: 30vw;
+    width: 40vw;
     --height: fit-content;
   }
 
