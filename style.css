@@ -2,31 +2,11 @@
   font-family: 'montserrat';
   src: url('assets/polices/Montserrat/Montserrat-VariableFont_wght.ttf')
 }
-
-h3,
-h4 {
-  font-family: "montserrat", sans-serif;
-  letter-spacing: 5px;
-}
-p,
-label,
-li,
-form {
-  font-family: "montserrat", sans-serif;
-}
-label {
-  letter-spacing: 1.8px;
-  font-size: 20px;
+@font-face {
+  font-family: 'lato';
+  src: url('assets/polices/Lato/Lato-Light.ttf')
 }
 
-.description>h1 {
-  font-family: "montserrat", sans-serif;
-    font-size: 4rem;
-}
-
-p {
-  font-family: ;
-}
 
 :root {
   --margin-box: 20px;
@@ -99,6 +79,14 @@ header h2 {
   color: #fff;
 
 }
+
+h1, h2, h3 {
+  font-family: 'Montserrat';
+}
+p {
+  font-family: 'lato';
+}
+
 /*-------fin header ------------------------------------------------------------------------*/
 
 /*-------section description ---------------------------------------------------------------*/
@@ -113,7 +101,6 @@ header h2 {
 .description h1 {
   margin-top: 2rem;
   position: relative;
-  font-family: "montserrat", sans-serif;
   color: #39424e;
   width: 90%;
   padding-bottom: 3rem;
@@ -135,7 +122,6 @@ header h2 {
 }
 
 .description>p {
-  font-family: "montserrat", sans-serif;
   color: #39424e;
   width: 80%;
   font-size: 1.1rem;
@@ -149,43 +135,6 @@ header h2 {
   margin: 2rem;
 }
 
-#image-arrow {
-  height: 70px;
-  width: 70px;
-  animation: bounce2 2s ease infinite;
-}
-
-@keyframes bounce2 {
-
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-
-  40% {
-    transform: translateY(-30px);
-  }
-
-  60% {
-    transform: translateY(-15px);
-  }
-}
-
-.swipe-logo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.description>.swipe-logo>p {
-  font-family: "montserrat", sans-serif;
-  color: #39424e;
-  font-size: 1.2rem;
-}
 
 /* ----Fin Description ------------------------------------------------------------------- */
 
@@ -313,8 +262,6 @@ ul li {
   padding-bottom: 15px;
   background-color: var(--main-color);
   color: whitesmoke;
-  font-family: "montserrat, sans-serif";
-  letter-spacing: 15px;
   font-size: 1.8rem;
   font-weight: bold;
   margin-right: -20px;
@@ -328,7 +275,6 @@ ul li {
   margin-top: 15px;
   margin-bottom: 15px;
   color: #39424e;
-  font-family: "montserrat", sans-serif;
   font-size: 1.2rem;
 }
 
