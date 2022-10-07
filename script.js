@@ -54,8 +54,8 @@ if (pourcentage >= 52) {
 
 //Scroll anime part: progress bar & Box
 
-document.querySelector('main').addEventListener('scroll', () => {
-
+//document.querySelector('main').addEventListener('scroll', () => {
+window.addEventListener("scroll" , () => {
   const windowHeight = window.innerHeight || document.documentElement.clientHeight;
 
   if (progressBar.getBoundingClientRect().top < windowHeight / 2) {
