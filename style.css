@@ -1,6 +1,31 @@
 @font-face {
-  font-family: 'bainsley';
-  src: url('assets/bainsley');
+  font-family: 'montserrat';
+  src: url('assets/polices/Montserrat/Montserrat-VariableFont_wght.ttf')
+}
+
+h3,
+h4 {
+  font-family: "montserrat", sans-serif;
+  letter-spacing: 5px;
+}
+p,
+label,
+li,
+form {
+  font-family: "montserrat", sans-serif;
+}
+label {
+  letter-spacing: 1.8px;
+  font-size: 20px;
+}
+
+.description>h1 {
+  font-family: "montserrat", sans-serif;
+    font-size: 4rem;
+}
+
+p {
+  font-family: ;
 }
 
 :root {
@@ -69,9 +94,10 @@ header .logo {
 }
 
 header h2 {
-  font-family: "Varela Round", sans-serif;
+  font-family: "montserrat", sans-serif;
   font-size: 1.2rem;
   color: #fff;
+
 }
 /*-------fin header ------------------------------------------------------------------------*/
 
@@ -87,7 +113,7 @@ header h2 {
 .description h1 {
   margin-top: 2rem;
   position: relative;
-  font-family: "Varela Round", sans-serif;
+  font-family: "montserrat", sans-serif;
   color: #39424e;
   width: 90%;
   padding-bottom: 3rem;
@@ -109,7 +135,7 @@ header h2 {
 }
 
 .description>p {
-  font-family: "Raleway", sans-serif;
+  font-family: "montserrat", sans-serif;
   color: #39424e;
   width: 80%;
   font-size: 1.1rem;
@@ -156,7 +182,7 @@ header h2 {
 }
 
 .description>.swipe-logo>p {
-  font-family: "Raleway", sans-serif;
+  font-family: "montserrat", sans-serif;
   color: #39424e;
   font-size: 1.2rem;
 }
@@ -229,8 +255,6 @@ header h2 {
   border: 0.5rem solid var(--main-color);
 }
 
-.box.b1 {}
-
 .box.b2 {
   top: 25%;
 }
@@ -289,8 +313,9 @@ ul li {
   padding-bottom: 15px;
   background-color: var(--main-color);
   color: whitesmoke;
-  font-family: "Varela Round", sans-serif;
-  font-size: 1.3rem;
+  font-family: "montserrat, sans-serif";
+  letter-spacing: 15px;
+  font-size: 1.8rem;
   font-weight: bold;
   margin-right: -20px;
   margin-left: -20px;
@@ -303,7 +328,7 @@ ul li {
   margin-top: 15px;
   margin-bottom: 15px;
   color: #39424e;
-  font-family: "Varela Round", sans-serif;
+  font-family: "montserrat", sans-serif;
   font-size: 1.2rem;
 }
 
