@@ -238,7 +238,7 @@ ul li {
 /*---- section formulaire ----------------------------------------------------------------------------*/
 
 .formulaire {
-  margin: var(--margin-box);
+  margin:var(--margin-box);
   --margin-top: calc(50vh - 50px);
   --transform: translateY(-50%);
   height: calc(100vh - 100px);
@@ -248,7 +248,7 @@ ul li {
 }
 
 .formulaire form {
-  margin: 20px;
+  margin: 0 20px;
   display: flex;
   flex-direction: column;
   height: calc(100vh - 100px);
@@ -418,7 +418,7 @@ iframe {
   }
 
   .formulaire form {
-    margin: 0 20px 20px 20px;
+    --margin: 0 20px 20px 20px;
     justify-content: space-around;
   }
 
