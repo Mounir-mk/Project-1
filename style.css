@@ -2,6 +2,7 @@
   font-family: 'montserrat';
   src: url('assets/polices/Montserrat/Montserrat-VariableFont_wght.ttf')
 }
+
 @font-face {
   font-family: 'lato';
   src: url('assets/polices/Lato/Lato-Light.ttf')
@@ -12,9 +13,11 @@
   --margin-box: 20px;
   --main-color: #f76c6c;
 }
+
 html {
-  height: -webkit-fill-available;;
+  height: -webkit-fill-available;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -48,12 +51,13 @@ main {
   flex: none;
 }
 */
-#timeline{
+#timeline {
   width: 100%;
   height: calc(100vh - 50px);
   scroll-snap-align: start;
   flex: none;
 }
+
 /*----- FIN TEST SCROLL SNAP -------*/
 
 /*----HEADER-CSS---------------------------------------------------------------------------*/
@@ -74,15 +78,18 @@ header .logo {
 }
 
 header h2 {
-  font-family: montserrat, sans-serif;
+  font-family: "montserrat", sans-serif;
   font-size: 1.2rem;
   color: #fff;
 
 }
 
-h1, h2, h3 {
-  font-family: montserrat, sans-serif;
+h1,
+h2,
+h3 {
+  font-family: "montserrat", sans-serif;
 }
+
 p {
   font-family: 'lato';
 }
@@ -238,7 +245,7 @@ ul li {
 /*---- section formulaire ----------------------------------------------------------------------------*/
 
 .formulaire {
-  margin:var(--margin-box);
+  margin: var(--margin-box);
   --margin-top: calc(50vh - 50px);
   --transform: translateY(-50%);
   height: calc(100vh - 100px);
@@ -248,7 +255,7 @@ ul li {
 }
 
 .formulaire form {
-  margin: 0 20px;
+  margin: 20px;
   display: flex;
   flex-direction: column;
   height: calc(100vh - 100px);
@@ -271,7 +278,7 @@ ul li {
 }
 
 .formulaire label {
-  font-family: montserrat, sans-serif;
+  font-family: "montserrat", sans-serif;
   display: block;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -320,36 +327,42 @@ iframe {
   margin: calc(10% / 2);
 }
 
-.iframe{
+.iframe {
   width: 90%;
   height: 90%;
   padding: 0;
 }
+
 /*---- fin de section de formulaire ----------------------------------------------------*/
 
 /*-------------FOOTER ----------------------------------------------------------------- */
 
 /*-----MEDIA----------------------------------------------------------------------------*/
 @media screen and (min-width: 768px) {
-  header{
+  header {
     --padding: 3rem;
   }
-  header h2{
+
+  header h2 {
     font-size: 1.5rem;
   }
 
-  .description{
+  .description {
     margin-bottom: 50px;
   }
-  .softskills{
+
+  .softskills {
     margin: 5rem;
   }
-  .swipe-logo{
+
+  .swipe-logo {
     margin-bottom: 50px;
   }
-  header{
+
+  header {
     justify-content: flex-start;
   }
+
   #progress-bar {
     margin-left: 50%;
     transform: translateX(-50%);
@@ -419,7 +432,7 @@ iframe {
   }
 
   .formulaire form {
-    --margin: 0 20px 20px 20px;
+    margin: 0 20px 20px 20px;
     justify-content: space-around;
   }
 
@@ -430,13 +443,14 @@ iframe {
     align-items: center;
   }
 
-    iframe{
-      padding : 20px;
-      height: 100%;
-    }
-    #iframe{
-      width: 50vw;
-    }
+  iframe {
+    padding: 20px;
+    height: 100%;
+  }
+
+  #iframe {
+    width: 50vw;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
