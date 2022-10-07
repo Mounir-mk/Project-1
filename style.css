@@ -74,14 +74,14 @@ header .logo {
 }
 
 header h2 {
-  font-family: "montserrat", sans-serif;
+  font-family: montserrat, sans-serif;
   font-size: 1.2rem;
   color: #fff;
 
 }
 
 h1, h2, h3 {
-  font-family: "montserrat", sans-serif;
+  font-family: montserrat, sans-serif;
 }
 p {
   font-family: 'lato';
@@ -238,7 +238,7 @@ ul li {
 /*---- section formulaire ----------------------------------------------------------------------------*/
 
 .formulaire {
-  margin: var(--margin-box);
+  margin:var(--margin-box);
   --margin-top: calc(50vh - 50px);
   --transform: translateY(-50%);
   height: calc(100vh - 100px);
@@ -248,7 +248,7 @@ ul li {
 }
 
 .formulaire form {
-  margin: 20px;
+  margin: 0 20px;
   display: flex;
   flex-direction: column;
   height: calc(100vh - 100px);
@@ -271,7 +271,7 @@ ul li {
 }
 
 .formulaire label {
-  font-family: "montserrat", sans-serif;
+  font-family: montserrat, sans-serif;
   display: block;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -419,7 +419,7 @@ iframe {
   }
 
   .formulaire form {
-    margin: 0 20px 20px 20px;
+    --margin: 0 20px 20px 20px;
     justify-content: space-around;
   }
 
